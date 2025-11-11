@@ -1,18 +1,30 @@
 
 <#
-Script to export intune configuration policies based on the 
+Script to export intune configuration policies.
 
-Version 1.1 - 2025 NOV.11 First version of JoshBasquez fork, uses delegated permissions
+Version 1.1 - 2025 NOV.11 First version of JoshBasquez fork, uses delegated permissions (requires admin interactive browser login).
 
-Fork based on github.com/sandytsang/MSIntune 
+Fork based on github.com/sandytsang/MSIntune. Updated to use app registration and admin delegated permissions.
 
 Other credits to
 https://scconfigmgr.com,https://msendpointmgr.com/
 @powers-hell, @onpremcloudguy, 
 
+alternate endpoints:
+
+AzureCommercial
+ -login:   login.microsoftonline.com
+ -baseurl: graph.microsoft.com
+AzureGov
+ -login:   login.microsoftonline.us
+ -baseurl: graph.microsoft.us
+AzureUSGovDoD
+ -login:   login.microsoftonline.us
+ -baseurl: dod-graph.microsoft.us
+   
 #>
 
-
+# set variables
 $TenantId   = "tenant-id-number"   # e.g., "contoso.onmicrosoft.com" or GUID
 $ClientId   = "entra-appId-number" # Application (client) ID from Entra app Registrations
 $loginURL = "https://login.microsoftonline.com"
@@ -21,7 +33,6 @@ $ExportPath = "C:\IntuneExport"
 
 # NOTE: permissions needed for clientID
 # Microsoft Graph\DeviceManagementConfiguration.ReadWrite.All (delegated)
-
 
 ########### Authentication via DeviceCode
 
