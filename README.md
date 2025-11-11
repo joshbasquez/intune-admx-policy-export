@@ -1,6 +1,6 @@
-## intune policy export / import
+# intune policy export / import
 
-# for configuration policies based on admx administrative templates.
+## for configuration policies based on admx administrative templates.
 
 updated scripts:
 
