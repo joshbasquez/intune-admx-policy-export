@@ -1,5 +1,10 @@
-## intune policy export / import for configuration policies based on admx administrative templates.
+## intune policy export / import
 
-Please see the import/export scripts under intune powershell / deviceconfiguration located here:
+# for configuration policies based on admx administrative templates.
 
-https://github.com/joshbasquez/intune-admx-policy-export/tree/master/Intune-PowerShell/DeviceConfiguration
+updated scripts:
+
+for delegated permissions (admin authentication via browser device code):
+- admx-policy-export.ps1 / admx-policy-import.ps1
+
+TODO: Add support for app registration clientID + clientSecret AND clientID + certificate based authentication
