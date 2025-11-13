@@ -9,9 +9,10 @@ Pre-requisites:<BR>
 -intune displayname of the policy must not contain any special characters (export creates a folder with the displayname of the policy)
 
 <BR>
-## When an update to the admx template for a third party application is released, Microsoft Intune may require you to remove any policies using that template prior to removing and re-adding the updated admx file. There are other workarounds, including importing the admx file with a modified namespace (causes duplicate policy options), but this export/import script will allow you to backup your policies so that the policies and old admx file can be removed. Be advised that the new admx must include the old policy options. 
+Microsoft learn - Intune - Replace existing admx files:<BR>
+https://learn.microsoft.com/en-us/intune/intune-service/configuration/administrative-templates-import-custom#replace-existing-admx-files
 
-This script is experimental and for learning purposes only. Use at your own risk. Document any policies prior to deleting them in your own production environment. 
+<BR><BR>This script is experimental and for learning purposes only. Use at your own risk. Document any policies prior to deleting them in your own production environment. 
 
 TODO: <BR>
 -Add support for authentication via client/secret and certAuth<BR>
