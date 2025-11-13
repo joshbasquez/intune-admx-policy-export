@@ -103,7 +103,7 @@ $headers = @{
     "Authorization" = "Bearer $Token"
     "Content-Type" = "application/json"
 }
-write-host "graph API connected via delegated permissions and appID $clientID" -f Yellow
+write-host "`ngraph API connected via delegated permissions and appID $clientID" -f Yellow
 
 $global:Authtoken = $headers
 
@@ -523,7 +523,7 @@ NAME: Test-AuthHeader
 	}
 
 	$PolicyName = (Get-Item $ImportPath).Name
-	Write-Host "Adding ADMX Configuration Policy '$PolicyName'" -ForegroundColor Yellow
+	Write-Host "`n-Adding ADMX Configuration Policy '$PolicyName'" -ForegroundColor Yellow
 	$GroupPolicyConfigurationID = Create-GroupPolicyConfigurations -DisplayName $PolicyName
 	
 	$JsonFiles = Get-ChildItem $ImportPath
@@ -531,7 +531,7 @@ NAME: Test-AuthHeader
 	foreach ($JsonFile in $JsonFiles)
 	{
 		
-		Write-Host "Adding ADMX Configuration setting $($JsonFile.Name)" -ForegroundColor Yellow
+		Write-Host "-Adding ADMX Configuration setting $($JsonFile.Name)" -ForegroundColor Yellow
 		$JSON_Data = Get-Content "$($JsonFile.FullName)"
 		
 		# Excluding entries that are not required - id,createdDateTime,lastModifiedDateTime,version
