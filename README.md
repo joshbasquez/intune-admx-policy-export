@@ -1,11 +1,12 @@
-# intune policy export / import
+# Microsoft Intune admx policies
 
-## for configuration policies based on admx administrative templates.
+## for exporting/importing of Microsoft Intune device configuration policies based on admx administrative templates.
 
-updated scripts:
 
-for delegated permissions (admin authentication via browser device code):
-- admx-policy-export.ps1 / admx-policy-import.ps1
+Pre-requisites:
+-app registration must have delegated permission: Microsoft Graph\DeviceManagementConfiguration.Readwrite.all
+-intune displayname of the policy must not contain any special characters (export creates a folder with the displayname of the policy)
+
 
 TODO: Add support for authentication via
 -app registration clientID + clientSecret
