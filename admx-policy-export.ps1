@@ -1,6 +1,7 @@
-
 <#
-Script to export intune configuration policies.
+ADMX Policy Export
+--
+Script to import intune configuration policies.
 
 Version 1.1 - 2025 NOV.11 First version of JoshBasquez fork, uses delegated permissions (requires admin interactive browser login).
 
