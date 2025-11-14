@@ -29,7 +29,7 @@ $TenantId   = "xxx-tenantID-xxx"   # e.g., "contoso.onmicrosoft.com" or GUID
 $ClientId   = "xxx-applicationID-xxx" # Application (client) ID from Azure AD
 $loginURL = "https://login.microsoftonline.com"
 $baseURL = "https://graph.microsoft.com"
-$ImportPath = "C:\IntuneOutput"
+$ImportPath = "C:\IntuneExport"
 
 # NOTE: permissions needed for clientID
 # Microsoft Graph\DeviceManagementConfiguration.ReadWrite.All (delegated)
